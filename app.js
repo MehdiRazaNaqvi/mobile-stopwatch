@@ -13,12 +13,12 @@ var interval;
 function start() {
     msec++
     msecHeading.innerHTML = msec;
-    if(msec >= 05) {
+    if(msec >= 59) {
         sec++
         secHeading.innerHTML = sec;
         msec = 0;
         }
-    if (sec >= 05) {
+    if (sec >= 59) {
         min++
         minHeading.innerHTML = min;
         sec = 0;
@@ -27,7 +27,7 @@ function start() {
 
 
 function timer() {
-interval = setInterval(start,10);
+interval = setInterval(start,16.66666666);
 document.getElementById("startbtn").disabled = "true"
 }
 

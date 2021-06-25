@@ -9,8 +9,6 @@ var msecHeading = document.getElementById("msec");
 var interval;
 
 
-document.getElementById("result").style.display = "none";
-
 
 function start() {
     msec++
@@ -33,7 +31,7 @@ function start() {
 function timer() {
 interval = setInterval(start,16.66666666);
 document.getElementById("startbtn").disabled = true;
-document.getElementById("result").style.display = "none";
+
 
 
 }
@@ -49,8 +47,27 @@ document.getElementById("startbtn").disabled = 0;
 }
 
 function reset() {
-    pause();
-    result();   
+    pause();   
+    var ediv = document.createElement("div");
+    var rdiv = document.getElementById("resultdiv");
+    
+    rdiv.appendChild(ediv);
+    ediv.setAttribute("id","ediv")
+    var dot = document.createTextNode(":")
+    var dot2 = document.createTextNode(":")
+
+    var edivtext1 = document.createTextNode(min)
+    
+    var edivtext2 = document.createTextNode(sec)
+    
+    var edivtext3 = document.createTextNode(msec)
+
+    ediv.appendChild(edivtext1)
+    ediv.appendChild(dot2)
+    ediv.appendChild(edivtext2)
+    ediv.appendChild(dot)
+    ediv.appendChild(edivtext3)
+
     min = 0;
     sec = 0;
     msec = 0;
@@ -65,24 +82,3 @@ function reset() {
 
 
 
-
-
-function result () {
-    document.getElementById("minres").innerText = min;
-    document.getElementById("secres").innerHTML = sec;
-    document.getElementById("msecres").innerText = msec;
-    document.getElementById("dltbtn").innerHTML = "delete" 
-    document.getElementById("dotone").innerHTML = ":";
-    document.getElementById("dottwo").innerHTML = ":";
-    document.getElementById("result").style.display = "flex";
-
-    
-
-
-}
-
-
-
-function dlt() {
-    document.getElementById("result").style.display = "none";
-}

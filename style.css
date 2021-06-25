@@ -28,15 +28,24 @@ body{
     width: 30%;
     display: flex;
     justify-content: center;
-
-    
 }
-.result{
-    background-color: rgb(255, 255, 255);
+    
+#ediv{
+    background-color: rgb(245, 245, 245);
+    width: 50%;
+    height: 10%;
     display: flex;
     justify-content: center;
-    justify-content: space-around;
-    margin-top: 10%;
-    
-}
+    font-size: 1.5rem;
+    margin: 10% auto;
+    border-radius: 3%;
 
+}
+#resultdiv{
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    padding: 3%;
+    height: 100%;
+    
+
+}

@@ -55,6 +55,10 @@ function reset() {
     ediv.setAttribute("id","ediv")
     var dot = document.createTextNode(":")
     var dot2 = document.createTextNode(":")
+    var dltbtn = document.createElement("button")
+    dltbtntext = document.createTextNode("Delete")
+    dltbtn.appendChild(dltbtntext);
+    
 
     var edivtext1 = document.createTextNode(min)
     
@@ -67,6 +71,7 @@ function reset() {
     ediv.appendChild(edivtext2)
     ediv.appendChild(dot)
     ediv.appendChild(edivtext3)
+    ediv.appendChild(dltbtn)
 
     min = 0;
     sec = 0;
@@ -78,7 +83,10 @@ function reset() {
     
 }
 
-
+function dltall() {
+    var dltbutton = document.getElementById("dltbtn")
+    dltbutton.parentNode.nextSibling.innerHTML = ""
+}
 
 
 
